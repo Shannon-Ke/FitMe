@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Firebase;
-using Firebase.Database;
-using Firebase.Unity.Editor;
+//using Firebase;
+//using Firebase.Database;
+//using Firebase.Unity.Editor;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -33,15 +33,15 @@ public class PhoneCamera : MonoBehaviour
     public ClosetController closet;
     public ScrollRect formView;
 
-    public DatabaseReference reference;
+    //public DatabaseReference reference;
 
     // Start is called before the first frame update
     void Start()
     {
 
 
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fitme-257203.firebaseio.com");
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://fitme-257203.firebaseio.com");
+        //reference = FirebaseDatabase.DefaultInstance.RootReference;
 
 
         savepath = Application.persistentDataPath + "/";
@@ -120,14 +120,14 @@ public class PhoneCamera : MonoBehaviour
         takenImage.texture = null;
         formView.verticalNormalizedPosition = 1f;
         closet.Populate();
-        Debug.Log(reference);
-        Debug.Log("hello");
-        reference.Child(itemName.text).Child("image").SetValueAsync(takenImage.texture);
-        reference.Child(itemName.text).Child("category").SetValueAsync(category.category);
-        foreach (string s in styles)
-        {
-            reference.Child(itemName.text).Child("styles").SetValueAsync(s);
-        }
+        //Debug.Log(reference);
+        //Debug.Log("hello");
+        //reference.Child(itemName.text).Child("image").SetValueAsync(takenImage.texture);
+        //reference.Child(itemName.text).Child("category").SetValueAsync(category.category);
+        //foreach (string s in styles)
+        //{
+        //    reference.Child(itemName.text).Child("styles").SetValueAsync(s);
+        //}
 
     }
 }
