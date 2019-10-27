@@ -15,6 +15,7 @@ public class HideAllBut : MonoBehaviour
 
     public GameObject welcomeItems;
     public SceneController control;
+    public GameObject home;
 
     void Start() {
         buttons = new GameObject[6];
@@ -34,5 +35,15 @@ public class HideAllBut : MonoBehaviour
         }
         welcomeItems.SetActive(false);
         control.Home(name);
+    }
+
+    public void Activate()
+    {
+        foreach (GameObject g in buttons)
+        {
+            g.SetActive(true);
+        }
+        welcomeItems.SetActive(true);
+        home.SetActive(false);
     }
 }

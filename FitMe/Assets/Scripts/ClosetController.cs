@@ -55,6 +55,9 @@ public class ClosetController : MonoBehaviour
             Text name = curr.transform.Find("Text").GetComponent<Text>();
             name.text = control.items[i].name;
             RawImage itemImage = curr.transform.Find("ItemImage").GetComponent<RawImage>();
+            //Texture2D tex = new Texture2D(16,16);
+            //tex.LoadRawTextureData(control.items[i].image);
+            //tex.Apply();
             itemImage.texture = control.items[i].image;
             Image type = curr.transform.Find("Image").GetComponent<Image>();
             if (control.items[i].category == "shirt") type.sprite = shirt;
