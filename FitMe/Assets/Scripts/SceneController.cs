@@ -105,6 +105,7 @@ public class SceneController : MonoBehaviour
             Vector3 pos1 = container.transform.position;
             Quaternion rot1 = container.transform.rotation;
             List<int> used = new List<int>();
+            List<string> usedtags = new List<string>();
             for (int j = 0; j < 6; j++) {
 
                 GameObject curr1 = Instantiate(miniClothingPrefab, pos, rot);
@@ -128,6 +129,8 @@ public class SceneController : MonoBehaviour
                 }
                 used.Add(index);
 
+
+
                 image.texture = newItems[index].image;
 
 
@@ -146,8 +149,9 @@ public class SceneController : MonoBehaviour
         }
         Vector3 pos = popupContent.transform.position;
         Quaternion rot = popupContent.transform.rotation;
-
-            for (int j = 0; j < 6; j++)
+        List<string> usedtags = new List<string>();
+        for (int j = 0; j < 6; j++){
+            if (!usedtags.Contains(newItems[used[j]].category))
             {
                 GameObject curr1 = Instantiate(ClothingPrefab, pos, rot);
                 curr1.transform.SetParent(popupContent.transform);
@@ -159,9 +163,12 @@ public class SceneController : MonoBehaviour
                 Text text = curr1.transform.Find("Text").GetComponent<Text>();
                 text.text = newItems[used[j]].name;
 
-
-
+                usedtags.Add(newItems[used[j]].category);
             }
+                
+
+
+        }
             popup.SetActive(true);
 
     }

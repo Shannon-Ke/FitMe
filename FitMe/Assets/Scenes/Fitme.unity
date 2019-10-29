@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 84678715}
   - component: {fileID: 84678714}
   - component: {fileID: 84678713}
+  - component: {fileID: 84678717}
+  - component: {fileID: 84678716}
   m_Layer: 5
   m_Name: Shoes
   m_TagString: Untagged
@@ -200,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 84678714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 84678717}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &84678714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +250,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84678711}
   m_CullTransparentMesh: 0
+--- !u!114 &84678716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84678711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: c00cc046ddb65477d99c3e1ce1d605f5, type: 3}
+  on: {fileID: 21300000, guid: 60dc1632bacd84999b29b065ed38c0a2, type: 3}
+  isOn: 0
+--- !u!114 &84678717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84678711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: shoes
+  control: {fileID: 1266658293}
 --- !u!1 &125333237
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,8 +314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 0, y: -3.5}
+  m_SizeDelta: {x: -20, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125333239
 MonoBehaviour:
@@ -431,6 +474,8 @@ GameObject:
   - component: {fileID: 143206291}
   - component: {fileID: 143206290}
   - component: {fileID: 143206289}
+  - component: {fileID: 143206293}
+  - component: {fileID: 143206292}
   m_Layer: 5
   m_Name: Coat
   m_TagString: Untagged
@@ -499,7 +544,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 143206290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 143206293}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &143206290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +592,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143206287}
   m_CullTransparentMesh: 0
+--- !u!114 &143206292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143206287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: b53e91bfca3264ee48238cff7f82f2cd, type: 3}
+  on: {fileID: 21300000, guid: 08c8d827ecae94e6587305fff0c5df8b, type: 3}
+  isOn: 0
+--- !u!114 &143206293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143206287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: coat
+  control: {fileID: 1266658293}
 --- !u!1 &146287307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1321,8 @@ GameObject:
   - component: {fileID: 356169341}
   - component: {fileID: 356169340}
   - component: {fileID: 356169339}
+  - component: {fileID: 356169343}
+  - component: {fileID: 356169342}
   m_Layer: 5
   m_Name: Shirts
   m_TagString: Untagged
@@ -1303,7 +1391,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 356169340}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 356169343}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &356169340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,6 +1439,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356169337}
   m_CullTransparentMesh: 0
+--- !u!114 &356169342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356169337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: 12aefc4dcb51a473180c65dcf5276505, type: 3}
+  on: {fileID: 21300000, guid: 0cf16f200d7ea48b1b0e5cc6d5f99c78, type: 3}
+  isOn: 0
+--- !u!114 &356169343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356169337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: shirt
+  control: {fileID: 1266658293}
 --- !u!1 &371563254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,8 +1576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 0, y: -3.5}
+  m_SizeDelta: {x: -20, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384812949
 MonoBehaviour:
@@ -1839,6 +1968,7 @@ MonoBehaviour:
   controller: {fileID: 1202343946}
   closet: {fileID: 1266658293}
   formView: {fileID: 127481996}
+  addscreen: {fileID: 1275841792}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1929,7 +2059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 202.5, y: -1240.1}
+  m_AnchoredPosition: {x: 202.5, y: -1240.1001}
   m_SizeDelta: {x: 257, y: 42.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &522797459
@@ -3306,6 +3436,8 @@ GameObject:
   - component: {fileID: 861219283}
   - component: {fileID: 861219282}
   - component: {fileID: 861219281}
+  - component: {fileID: 861219285}
+  - component: {fileID: 861219284}
   m_Layer: 5
   m_Name: Pants
   m_TagString: Untagged
@@ -3374,7 +3506,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861219282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 861219285}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861219282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3411,6 +3554,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861219279}
   m_CullTransparentMesh: 0
+--- !u!114 &861219284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861219279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: 8d45f31d106be4ae783b3fad6403be0f, type: 3}
+  on: {fileID: 21300000, guid: d9608a87607094e7e9cc5914db4110d3, type: 3}
+  isOn: 0
+--- !u!114 &861219285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861219279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: pants
+  control: {fileID: 1266658293}
 --- !u!1 &913327712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +4023,7 @@ GameObject:
   - component: {fileID: 1001447762}
   - component: {fileID: 1001447761}
   - component: {fileID: 1001447760}
+  - component: {fileID: 1001447763}
   m_Layer: 5
   m_Name: Favorites
   m_TagString: Untagged
@@ -3955,6 +4129,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001447758}
   m_CullTransparentMesh: 0
+--- !u!114 &1001447763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001447758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: 567f8ee46b5754facacc2c9fd2cbdfe7, type: 3}
+  on: {fileID: 21300000, guid: c5d0ad8ee36eb4874a0161e276de593e, type: 3}
+  isOn: 0
 --- !u!1 &1074118527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,6 +5075,7 @@ MonoBehaviour:
   dress: {fileID: 21300000, guid: 8ae35639a5fd14271a54f0565d880f6d, type: 3}
   coat: {fileID: 21300000, guid: b87f4a4d487c74fd0bd53b9e918d644b, type: 3}
   acc: {fileID: 21300000, guid: b568366e21b60466d97ec837a605a16f, type: 3}
+  filterList: []
 --- !u!1 &1275841792
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,12 +5909,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.692
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6163,6 +6353,8 @@ GameObject:
   - component: {fileID: 1756597157}
   - component: {fileID: 1756597156}
   - component: {fileID: 1756597155}
+  - component: {fileID: 1756597159}
+  - component: {fileID: 1756597158}
   m_Layer: 5
   m_Name: Dress
   m_TagString: Untagged
@@ -6231,7 +6423,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1756597156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756597159}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1756597156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6268,6 +6471,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756597153}
   m_CullTransparentMesh: 0
+--- !u!114 &1756597158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756597153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: 5ff616cf40d8b420bbfe5f6305a658f7, type: 3}
+  on: {fileID: 21300000, guid: 1e5e47e67858e422c9af318146c20fb4, type: 3}
+  isOn: 0
+--- !u!114 &1756597159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756597153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: dress
+  control: {fileID: 1266658293}
 --- !u!1 &1757690072
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,6 +6587,8 @@ GameObject:
   - component: {fileID: 1782116229}
   - component: {fileID: 1782116228}
   - component: {fileID: 1782116227}
+  - component: {fileID: 1782116231}
+  - component: {fileID: 1782116230}
   m_Layer: 5
   m_Name: Accessories
   m_TagString: Untagged
@@ -6422,7 +6657,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1782116228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1782116231}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1782116228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6459,6 +6705,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782116225}
   m_CullTransparentMesh: 0
+--- !u!114 &1782116230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782116225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: a8c6f845a0c7444fd85190edf61968d6, type: 3}
+  on: {fileID: 21300000, guid: db6ef6c3e52d947aebe7ba55eb7e57c5, type: 3}
+  isOn: 0
+--- !u!114 &1782116231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782116225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: acc
+  control: {fileID: 1266658293}
 --- !u!1 &1783739730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6843,6 +7119,8 @@ GameObject:
   - component: {fileID: 1827303735}
   - component: {fileID: 1827303734}
   - component: {fileID: 1827303733}
+  - component: {fileID: 1827303737}
+  - component: {fileID: 1827303736}
   m_Layer: 5
   m_Name: Hats
   m_TagString: Untagged
@@ -6911,7 +7189,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1827303734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1827303737}
+        m_MethodName: ClickController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827303734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6948,6 +7237,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827303731}
   m_CullTransparentMesh: 0
+--- !u!114 &1827303736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827303731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e698b3155927740839ce10e7332575d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  off: {fileID: 21300000, guid: 75464ac4571d547d78d686090762fc0f, type: 3}
+  on: {fileID: 21300000, guid: 5df4786a826de4be1bc0ecc3d2542003, type: 3}
+  isOn: 0
+--- !u!114 &1827303737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827303731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1219d92f60a74fe59521c8fd50d05b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 732375794}
+  filterQ: hat
+  control: {fileID: 1266658293}
 --- !u!1 &1849998023
 GameObject:
   m_ObjectHideFlags: 0

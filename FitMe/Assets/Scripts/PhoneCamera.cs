@@ -30,7 +30,7 @@ public class PhoneCamera : MonoBehaviour
     public SceneController controller;
     public ClosetController closet;
     public ScrollRect formView;
-
+    public GameObject addscreen;
 
     // Start is called before the first frame update
     void Start()
@@ -52,18 +52,19 @@ public class PhoneCamera : MonoBehaviour
 
         for (int i = 0; i < devices.Length; i++)
         {
-            if (!devices[i].isFrontFacing)
+            if (devices[i].isFrontFacing)
             { //change this to !devices[i]... afterwards
                 backCam = new WebCamTexture(devices[i].name, Screen.width, Screen.width);
             }
-        }
 
+        }
+        //backCam = new WebCamTexture(devices[0].name, Screen.width, Screen.width);
         if (backCam == null)
         {
             Debug.Log("Unable to find back");
             return;
         }
-
+        
         backCam.Play();
         background.texture = backCam;
 
@@ -73,6 +74,17 @@ public class PhoneCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (addscreen.activeSelf && !camAvailable)
+        {
+            backCam.Play();
+            background.texture = backCam;
+
+            camAvailable = true;
+        } else if (!addscreen.activeSelf && camAvailable)
+        {
+            backCam.Stop();
+            camAvailable = false;
+        }
         if (!camAvailable) return;
 
         float ratio = (float)backCam.width / (float)backCam.height;

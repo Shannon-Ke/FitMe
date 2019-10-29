@@ -18,7 +18,7 @@ public class ClosetController : MonoBehaviour
     public Sprite coat;
     public Sprite acc;
 
-
+    public List<string> filterList;
 
     // Start is called before the first frame update
     //void Start()
@@ -40,6 +40,10 @@ public class ClosetController : MonoBehaviour
     //    }
     //}
 
+    private void Start()
+    {
+        filterList = new List<string>();
+    }
     public void Populate() {
         foreach(Transform child in closetContainer.transform)
         {
